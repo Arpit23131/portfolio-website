@@ -32,14 +32,6 @@ function Projects() {
             
           />
 
-          {/* My Profile Portfolio */}
-          <ProjectCard
-            image={portfolioImg}
-            href= "https://github.com/Arpit23131/portfolio-website"
-            title = "Personal Portfolio Website"
-            description = "Modern responsive portfolio website built using React and Tailwind CSS featuring interactive UI components, smooth navigation, reusable architecture, and dynamic experience/project sections."
-          />
-
           {/* Course Registration System */}
           <ProjectCard
             image={courseImg}
