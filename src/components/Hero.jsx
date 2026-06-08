@@ -1,4 +1,4 @@
-import myPhoto from '../assets/my_photo.jpeg'
+import myPhoto from '../assets/my_photo.jpg'
 import ResumePDF from '../assets/Arpit_Dabas_Resume.pdf'
 
 function Hero() {
