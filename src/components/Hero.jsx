@@ -33,7 +33,7 @@ function Hero() {
         </h2>
 
         <h2 className="text-2xl text-gray-300 mb-3">
-          Cybersecurity Enthusiast
+          AI Engineer
         </h2>
 
         <p className="text-lg text-gray-400 leading-relaxed mt-6">
