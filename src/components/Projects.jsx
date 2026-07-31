@@ -5,6 +5,7 @@ import portfolioImg from '../assets/projects/portfolio.png'
 import courseImg from '../assets/projects/course.png'
 import foodImg from '../assets/projects/food.png'
 import angrybirdsImg from '../assets/projects/angrybirds.png'
+import voicelinkImg from '../assets/projects/voicelink.png'
 
 function Projects() {
   return (
@@ -22,6 +23,15 @@ function Projects() {
 
         {/* Project Grid */}
         <div className="grid md:grid-cols-2 gap-10">
+
+          {/* VoiceLink */}
+          <ProjectCard
+            image={voicelinkImg}
+            href = "https://voice-link-sepia.vercel.app/"
+            title="VoiceLink - Secure Voice Calling Platform"
+            description="A full-stack real-time voice calling platform enabling secure peer-to-peer audio communication with user authentication, connection management, and live online presence."
+            
+          />
 
           {/* Security Dashboard */}
           <ProjectCard
