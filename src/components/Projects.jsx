@@ -1,4 +1,6 @@
+
 import ProjectCard from './ProjectCard'
+
 import dashboardImg1 from '../assets/projects/dashboard1.jpeg'
 import dashboardImg2 from '../assets/projects/dashboard2.jpeg'
 import portfolioImg from '../assets/projects/portfolio.png'
@@ -11,7 +13,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="px-10 py-24 bg-[#0f172a]"
+      className="px-5 sm:px-8 md:px-10 py-16 md:py-24 bg-[#0f172a]"
     >
 
       <div className="max-w-6xl mx-auto">
@@ -22,30 +24,28 @@ function Projects() {
         </h2>
 
         {/* Project Grid */}
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
 
           {/* VoiceLink */}
           <ProjectCard
             image={voicelinkImg}
-            href = "https://voice-link-sepia.vercel.app/"
+            href="https://voice-link-sepia.vercel.app/"
             title="VoiceLink - Secure Voice Calling Platform"
             description="A full-stack real-time voice calling platform enabling secure peer-to-peer audio communication with user authentication, connection management, and live online presence."
-            
           />
 
           {/* Security Dashboard */}
           <ProjectCard
             image={dashboardImg1}
-            href = "https://github.com/Arpit23131/Security-Devices-Monitoring-Dashboard"
+            href="https://github.com/Arpit23131/Security-Devices-Monitoring-Dashboard"
             title="Security Devices Monitoring Dashboard"
             description="Real-time dashboard for monitoring security devices, attack statistics, network traffic, and active sessions developed during internship at NIC."
-            
           />
 
           {/* Course Registration System */}
           <ProjectCard
             image={courseImg}
-            href = "https://github.com/Arpit23131/Course-Registration-System"
+            href="https://github.com/Arpit23131/Course-Registration-System"
             title="Course Registration System"
             description="Web-based platform enabling students to register for courses, manage schedules, and streamline academic workflows efficiently."
           />
@@ -53,7 +53,7 @@ function Projects() {
           {/* Food Ordering System */}
           <ProjectCard
             image={foodImg}
-            href = "https://github.com/Arpit23131/Food-Ordering-System"
+            href="https://github.com/Arpit23131/Food-Ordering-System"
             title="Food Ordering System"
             description="Interactive food ordering application featuring menu browsing, cart management, and responsive user interface design."
           />
@@ -61,12 +61,10 @@ function Projects() {
           {/* Angry Birds Clone */}
           <ProjectCard
             image={angrybirdsImg}
-            href = "https://github.com/Arpit23131/Angry-Birds-Clone"
+            href="https://github.com/Arpit23131/Angry-Birds-Clone"
             title="Angry Birds Clone"
             description="Game development project recreating Angry Birds gameplay mechanics including projectile launching, physics interactions, and obstacle destruction."
           />
-
-
 
         </div>
 
