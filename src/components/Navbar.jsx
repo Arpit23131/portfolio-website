@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'
 
 function Navbar() {
@@ -27,9 +28,12 @@ function Navbar() {
         }
 
       })
+
     }
 
     window.addEventListener('scroll', handleScroll)
+
+    handleScroll()
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -37,15 +41,24 @@ function Navbar() {
 
   }, [])
 
+  const navLinks = [
+    { name: 'About', id: 'about' },
+    { name: 'Projects', id: 'projects' },
+    { name: 'Experience', id: 'experience' },
+    { name: 'Skills', id: 'skills' },
+    { name: 'Contact', id: 'contact' },
+  ]
+
   return (
 
-    <nav className="sticky top-0 z-50 backdrop-blur-md bg-[#0f172a]/80 border-b border-gray-800">
+    <nav className="sticky top-0 z-50 w-full backdrop-blur-md bg-[#0f172a]/95 border-b border-gray-800">
 
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-10 py-5">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-5 sm:px-8 md:px-10 py-4 sm:py-5">
 
         {/* Logo */}
         <a
           href="#home"
+          onClick={() => setMenuOpen(false)}
           className="text-2xl md:text-3xl font-bold text-cyan-400 tracking-wide hover:scale-105 transition duration-300"
         >
           Arpit Dabas
@@ -54,69 +67,33 @@ function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-8 font-medium">
 
-          <a
-            href="#about"
-            className={`transition duration-300 hover:-translate-y-1 ${
-              activeSection === 'about'
-                ? 'text-cyan-400'
-                : 'text-gray-300 hover:text-cyan-400'
-            }`}
-          >
-            About
-          </a>
+          {navLinks.map((link) => (
 
-          <a
-            href="#projects"
-            className={`transition duration-300 hover:-translate-y-1 ${
-              activeSection === 'projects'
-                ? 'text-cyan-400'
-                : 'text-gray-300 hover:text-cyan-400'
-            }`}
-          >
-            Projects
-          </a>
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className={`transition duration-300 hover:-translate-y-1 ${
+                activeSection === link.id
+                  ? 'text-cyan-400'
+                  : 'text-gray-300 hover:text-cyan-400'
+              }`}
+            >
+              {link.name}
+            </a>
 
-          <a
-            href="#experience"
-            className={`transition duration-300 hover:-translate-y-1 ${
-              activeSection === 'experience'
-                ? 'text-cyan-400'
-                : 'text-gray-300 hover:text-cyan-400'
-            }`}
-          >
-            Experience
-          </a>
-
-          <a
-            href="#skills"
-            className={`transition duration-300 hover:-translate-y-1 ${
-              activeSection === 'skills'
-                ? 'text-cyan-400'
-                : 'text-gray-300 hover:text-cyan-400'
-            }`}
-          >
-            Skills
-          </a>
-
-          <a
-            href="#contact"
-            className={`transition duration-300 hover:-translate-y-1 ${
-              activeSection === 'contact'
-                ? 'text-cyan-400'
-                : 'text-gray-300 hover:text-cyan-400'
-            }`}
-          >
-            Contact
-          </a>
+          ))}
 
         </div>
 
         {/* Hamburger Button */}
         <button
-          className="md:hidden text-cyan-400 text-3xl"
+          type="button"
+          aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={menuOpen}
+          className="md:hidden text-cyan-400 text-3xl leading-none p-1"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          ☰
+          {menuOpen ? '✕' : '☰'}
         </button>
 
       </div>
@@ -124,17 +101,24 @@ function Navbar() {
       {/* Mobile Menu */}
       {menuOpen && (
 
-        <div className="md:hidden flex flex-col gap-6 px-6 pb-6 text-gray-300 font-medium bg-[#0f172a] border-t border-gray-800">
+        <div className="md:hidden flex flex-col gap-5 px-6 pb-6 pt-3 text-gray-300 font-medium bg-[#0f172a] border-t border-gray-800">
 
-          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          {navLinks.map((link) => (
 
-          <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              onClick={() => setMenuOpen(false)}
+              className={`transition duration-300 hover:text-cyan-400 ${
+                activeSection === link.id
+                  ? 'text-cyan-400'
+                  : 'text-gray-300'
+              }`}
+            >
+              {link.name}
+            </a>
 
-          <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
-
-          <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
-
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          ))}
 
         </div>
 
