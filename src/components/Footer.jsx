@@ -1,8 +1,9 @@
+
 function Footer() {
 
   return (
 
-    <footer className="bg-[#0b1120] border-t border-gray-800 text-white px-10 py-12">
+    <footer className="bg-[#0b1120] border-t border-gray-800 text-white px-5 sm:px-8 md:px-10 py-12">
 
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
 
@@ -20,7 +21,7 @@ function Footer() {
         </div>
 
         {/* Center Navigation */}
-        <div className="flex flex-wrap justify-center gap-6 text-gray-300">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-gray-300">
 
           <a
             href="#about"
