@@ -1,4 +1,72 @@
+
 @import "tailwindcss";
+
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+/* Global settings */
+body {
+  margin: 0;
+  background-color: #0f172a;
+  color: white;
+  font-family: inherit;
+}
+
+/* Primary buttons - cyan background */
+.btn-primary {
+  display: inline-block;
+  background-color: #22d3ee !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  border: 1px solid #22d3ee !important;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.btn-primary:hover {
+  background-color: #67e8f9 !important;
+  border-color: #67e8f9 !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* Outline buttons */
+.btn-outline {
+  display: inline-block;
+  background-color: transparent !important;
+  color: #22d3ee !important;
+  -webkit-text-fill-color: #22d3ee !important;
+  border: 1px solid #22d3ee !important;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.btn-outline:hover {
+  background-color: #22d3ee !important;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+}
+
+/* Better mobile interaction */
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Responsive spacing */
+@media (max-width: 767px) {
+  section {
+    scroll-margin-top: 80px;
+  }
 }
