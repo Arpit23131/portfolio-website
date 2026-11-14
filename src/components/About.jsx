@@ -1,6 +1,10 @@
+
 function About() {
   return (
-    <section id="about" className="px-10 py-24 bg-[#111827]">
+    <section
+      id="about"
+      className="px-5 sm:px-8 md:px-10 py-16 md:py-24 bg-[#111827]"
+    >
 
       <div className="max-w-5xl mx-auto">
 
@@ -8,7 +12,7 @@ function About() {
           About Me
         </h2>
 
-        <p className="text-gray-300 text-lg leading-relaxed">
+        <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
           I am Arpit Dabas, an engineering student at IIIT Delhi
           passionate about full-stack development, cybersecurity,
           and building impactful digital solutions.
