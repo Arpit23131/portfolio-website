@@ -101,7 +101,7 @@ function Contact() {
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=arpitdabas2006@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-center bg-cyan-400 text-black px-6 py-4 rounded-xl font-semibold transition duration-300 hover:scale-105 hover:bg-cyan-300"
+                className="btn-primary w-full px-6 py-4 rounded-xl hover:scale-105"
               >
                 Send Email
               </a>
@@ -110,7 +110,7 @@ function Contact() {
               <a
                 href={ResumePDF}
                 download
-                className="block text-center border border-cyan-400 text-cyan-400 px-6 py-4 rounded-xl font-semibold transition duration-300 hover:scale-105 hover:bg-cyan-400 hover:text-black"
+                className="btn-outline w-full px-6 py-4 rounded-xl hover:scale-105"
               >
                 Download Resume
               </a>
