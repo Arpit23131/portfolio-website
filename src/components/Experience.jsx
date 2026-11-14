@@ -1,25 +1,31 @@
+
 import { useState } from 'react'
+
 import Certificate from '../assets/Kho Kho world cup certificate.jpeg'
 import p1 from '../assets/khokho/1.jpg'
 import p2 from '../assets/khokho/2.jpg'
 import p3 from '../assets/khokho/3.jpg'
 import p4 from '../assets/khokho/4.jpg'
+
 import q1 from '../assets/ropeskipping/q1.jpeg'
 import q2 from '../assets/ropeskipping/q2.jpg'
 
-
 function Experience() {
-
   const [activeTab, setActiveTab] = useState('technical')
   const [showKhoKhoPhotos, setShowKhoKhoPhotos] = useState(false)
   const [showropeskippingphotos, setShowRopeSkippingPhotos] = useState(false)
 
+  const activeButton =
+    'btn-primary px-8 py-3 rounded-xl shadow-[0_0_25px_rgba(34,211,238,0.5)]'
+
+  const inactiveButton =
+    'bg-[#1e293b] text-gray-300 px-8 py-3 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition duration-300'
+
   return (
     <section
       id="experience"
-      className="px-10 py-24 bg-[#111827] text-white"
+      className="px-5 sm:px-8 md:px-10 py-16 md:py-24 bg-[#111827] text-white"
     >
-
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
@@ -28,32 +34,26 @@ function Experience() {
         </h2>
 
         {/* Tabs */}
-        <div className="flex gap-6 mb-12">
+        <div className="flex flex-col sm:flex-row gap-4 mb-12">
 
-          {/* Technical */}
           <button
             onClick={() => setActiveTab('technical')}
-            className={`px-8 py-3 rounded-xl font-semibold transition duration-300
-              
-              ${activeTab === 'technical'
-                ? 'bg-cyan-400 text-black shadow-[0_0_25px_rgba(34,211,238,0.5)]'
-                : 'bg-[#1e293b] text-gray-300 hover:bg-cyan-400 hover:text-black'
-              }
-            `}
+            className={
+              activeTab === 'technical'
+                ? activeButton
+                : inactiveButton
+            }
           >
             Technical
           </button>
 
-          {/* Event */}
           <button
             onClick={() => setActiveTab('event')}
-            className={`px-8 py-3 rounded-xl font-semibold transition duration-300
-              
-              ${activeTab === 'event'
-                ? 'bg-cyan-400 text-black shadow-[0_0_25px_rgba(34,211,238,0.5)]'
-                : 'bg-[#1e293b] text-gray-300 hover:bg-cyan-400 hover:text-black'
-              }
-            `}
+            className={
+              activeTab === 'event'
+                ? activeButton
+                : inactiveButton
+            }
           >
             Event Management
           </button>
@@ -63,10 +63,10 @@ function Experience() {
         {/* TECHNICAL EXPERIENCE */}
         {activeTab === 'technical' && (
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             {/* NIC Internship */}
-            <div className="bg-[#1e293b] p-8 rounded-2xl border border-gray-700 hover:border-cyan-400 transition duration-300">
+            <div className="bg-[#1e293b] p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-cyan-400 transition duration-300">
 
               <h3 className="text-2xl font-semibold text-cyan-400 mb-3">
                 NIC Internship
@@ -87,7 +87,7 @@ function Experience() {
                 href="https://github.com/Arpit23131/Security-Devices-Monitoring-Dashboard"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-cyan-400 text-black px-5 py-2 rounded-lg font-semibold hover:bg-cyan-300 transition"
+                className="btn-primary px-5 py-2 rounded-lg"
               >
                 GitHub
               </a>
@@ -95,7 +95,7 @@ function Experience() {
             </div>
 
             {/* Full Stack Development */}
-            <div className="bg-[#1e293b] p-8 rounded-2xl border border-gray-700 hover:border-cyan-400 transition duration-300">
+            <div className="bg-[#1e293b] p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-cyan-400 transition duration-300">
 
               <h3 className="text-2xl font-semibold text-cyan-400 mb-3">
                 Full Stack Development
@@ -113,9 +113,9 @@ function Experience() {
 
               <a
                 href="https://github.com/Arpit23131"
-                target='_blank'
-                rel='noopener noreferrer'
-                className="inline-block bg-cyan-400 text-black px-5 py-2 rounded-lg font-semibold hover:bg-cyan-300 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary px-5 py-2 rounded-lg"
               >
                 GitHub
               </a>
@@ -128,10 +128,10 @@ function Experience() {
         {/* EVENT MANAGEMENT EXPERIENCE */}
         {activeTab === 'event' && (
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             {/* Kho Kho World Cup */}
-            <div className="bg-[#1e293b] p-8 rounded-2xl border border-gray-700 hover:border-cyan-400 transition duration-300">
+            <div className="bg-[#1e293b] p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-cyan-400 transition duration-300">
 
               <h3 className="text-2xl font-semibold text-cyan-400 mb-3">
                 Kho Kho World Cup India 2025
@@ -151,65 +151,62 @@ function Experience() {
                 sporting event.
               </p>
 
-              <div className="flex gap-4 flex-wrap">
+              <div className="flex flex-wrap gap-4">
 
                 <a
                   href={Certificate}
-                  target = "_blank"
-                  rel = "noopener noreferrer"
-                  className="bg-cyan-400 text-black px-5 py-2 rounded-lg font-semibold hover:bg-cyan-300 transition"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary px-5 py-2 rounded-lg"
                 >
                   Certificate
                 </a>
 
                 <button
-                  onClick={() =>
-                    setShowKhoKhoPhotos(!showKhoKhoPhotos)
-                  }
-                  className="border border-cyan-400 text-cyan-400 px-5 py-2 rounded-lg font-semibold transition duration-300 hover:scale-105 hover:bg-cyan-400 hover:text-black"
+                  onClick={() => setShowKhoKhoPhotos(!showKhoKhoPhotos)}
+                  className="btn-outline px-5 py-2 rounded-lg hover:scale-105"
                 >
                   {showKhoKhoPhotos ? 'Hide Photos' : 'Photos'}
                 </button>
-                  
+
               </div>
-              {
-                showKhoKhoPhotos && (
 
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+              {showKhoKhoPhotos && (
 
-                    <img
-                      src={p1}
-                      alt="Kho Kho Event"
-                      className="rounded-xl"
-                    />
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
 
-                    <img
-                      src={p2}
-                      alt="Kho Kho Event"
-                      className="rounded-xl"
-                    />
+                  <img
+                    src={p1}
+                    alt="Kho Kho Event"
+                    className="w-full rounded-xl"
+                  />
 
-                    <img
-                      src={p3}
-                      alt="Kho Kho Event"
-                      className="rounded-xl"
-                    />
+                  <img
+                    src={p2}
+                    alt="Kho Kho Event"
+                    className="w-full rounded-xl"
+                  />
 
-                    <img
-                      src={p4}
-                      alt="Kho Kho Event"
-                      className="rounded-xl"
-                    />
+                  <img
+                    src={p3}
+                    alt="Kho Kho Event"
+                    className="w-full rounded-xl"
+                  />
 
-                  </div>
+                  <img
+                    src={p4}
+                    alt="Kho Kho Event"
+                    className="w-full rounded-xl"
+                  />
 
-                )
-              }
+                </div>
+
+              )}
 
             </div>
 
             {/* Rope Skipping */}
-            <div className="bg-[#1e293b] p-8 rounded-2xl border border-gray-700 hover:border-cyan-400 transition duration-300">
+            <div className="bg-[#1e293b] p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-cyan-400 transition duration-300">
 
               <h3 className="text-2xl font-semibold text-cyan-400 mb-3">
                 17th Delhi State Rope Skipping Championship
@@ -229,39 +226,38 @@ function Experience() {
               </p>
 
               <button
-                  onClick={() =>
-                    setShowRopeSkippingPhotos(!showropeskippingphotos)
-                  }
-                  className="border border-cyan-400 text-cyan-400 px-5 py-2 rounded-lg font-semibold transition duration-300 hover:scale-105 hover:bg-cyan-400 hover:text-black"
-                >
-                  {showropeskippingphotos ? 'Hide Photos' : 'Photos'}
-                </button>
-                {
-                showropeskippingphotos && (
+                onClick={() =>
+                  setShowRopeSkippingPhotos(!showropeskippingphotos)
+                }
+                className="btn-outline px-5 py-2 rounded-lg hover:scale-105"
+              >
+                {showropeskippingphotos ? 'Hide Photos' : 'Photos'}
+              </button>
 
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+              {showropeskippingphotos && (
 
-                    <img
-                      src={q1}
-                      alt="Rope Skipping Event"
-                      className="rounded-xl"
-                    />
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
 
-                    <img
-                      src={q2}
-                      alt="Kho Kho Event"
-                      className="rounded-xl"
-                    />
+                  <img
+                    src={q1}
+                    alt="Rope Skipping Event"
+                    className="w-full rounded-xl"
+                  />
 
-                  </div>
+                  <img
+                    src={q2}
+                    alt="Rope Skipping Event"
+                    className="w-full rounded-xl"
+                  />
 
-                )
-              }
+                </div>
+
+              )}
 
             </div>
 
             {/* Cultural Council */}
-            <div className="bg-[#1e293b] p-8 rounded-2xl border border-gray-700 hover:border-cyan-400 transition duration-300">
+            <div className="bg-[#1e293b] p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-cyan-400 transition duration-300">
 
               <h3 className="text-2xl font-semibold text-cyan-400 mb-3">
                 Cultural Council, IIIT Delhi
@@ -278,22 +274,23 @@ function Experience() {
               </p>
 
             </div>
+
             {/* Sports Council */}
-            <div className="bg-[#1e293b] p-8 rounded-2xl border border-gray-700 hover:border-cyan-400 transition duration-300">
+            <div className="bg-[#1e293b] p-6 sm:p-8 rounded-2xl border border-gray-700 hover:border-cyan-400 transition duration-300">
 
-            <h3 className="text-2xl font-semibold text-cyan-400 mb-3">
+              <h3 className="text-2xl font-semibold text-cyan-400 mb-3">
                 Sports Council, IIIT Delhi
-            </h3>
+              </h3>
 
-            <p className="text-gray-400 mb-4">
+              <p className="text-gray-400 mb-4">
                 Undergraduate Representative (2025–2026)
-            </p>
+              </p>
 
-            <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed">
                 Organized and coordinated multiple intra-college sports tournaments,
                 managed event operations, and contributed to planning and execution
                 of sports activities within the institute.
-            </p>
+              </p>
 
             </div>
 
@@ -301,7 +298,6 @@ function Experience() {
         )}
 
       </div>
-
     </section>
   )
 }
