@@ -1,3 +1,4 @@
+
 function Skills() {
 
   const technicalSkills = [
@@ -31,10 +32,9 @@ function Skills() {
   ]
 
   return (
-
     <section
       id="skills"
-      className="px-10 py-24 bg-[#0f172a] text-white"
+      className="px-5 sm:px-8 md:px-10 py-16 md:py-24 bg-[#0f172a] text-white"
     >
 
       <div className="max-w-6xl mx-auto">
@@ -51,13 +51,13 @@ function Skills() {
             Technical Skills
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
 
             {technicalSkills.map((skill, index) => (
 
               <div
                 key={index}
-                className="bg-[#1e293b] border border-gray-700 rounded-2xl p-6 text-center text-lg font-semibold hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.3)] transition duration-300 hover:-translate-y-2"
+                className="bg-[#1e293b] border border-gray-700 rounded-2xl p-4 sm:p-6 text-center text-sm sm:text-lg font-semibold hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.3)] transition duration-300 hover:-translate-y-2"
               >
                 {skill}
               </div>
@@ -75,13 +75,13 @@ function Skills() {
             Tools & Platforms
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
 
             {toolsPlatforms.map((tool, index) => (
 
               <div
                 key={index}
-                className="bg-[#1e293b] border border-gray-700 rounded-2xl p-6 text-center text-lg font-semibold hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.3)] transition duration-300 hover:-translate-y-2"
+                className="bg-[#1e293b] border border-gray-700 rounded-2xl p-4 sm:p-6 text-center text-sm sm:text-lg font-semibold hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.3)] transition duration-300 hover:-translate-y-2"
               >
                 {tool}
               </div>
@@ -99,13 +99,13 @@ function Skills() {
             Soft Skills
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
 
             {softSkills.map((skill, index) => (
 
               <div
                 key={index}
-                className="bg-[#1e293b] border border-gray-700 rounded-2xl p-6 text-center text-lg font-semibold hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.3)] transition duration-300 hover:-translate-y-2"
+                className="bg-[#1e293b] border border-gray-700 rounded-2xl p-4 sm:p-6 text-center text-sm sm:text-lg font-semibold hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_25px_rgba(34,211,238,0.3)] transition duration-300 hover:-translate-y-2"
               >
                 {skill}
               </div>
